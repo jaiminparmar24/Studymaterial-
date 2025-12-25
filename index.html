@@ -1,162 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <!-- SEO Meta -->
-    <title>IT WALE STUDY MATERIAL</title>
-    <meta name="description" content="Free IT Study Material for all subjects. OOP,OS,CN,COA,DM Web Technology, Programming – easy explanation and downloadable PDF notes.">
-    <meta name="keywords" content="IT Study Material, Assignment">
-    <meta name="author" content="IT Study Hub">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO Meta -->
+<title>IT WALE STUDY MATERIAL</title>
+<meta name="description" content="Free IT Study Material for diploma & degree students. Download notes, assignments and PDFs easily.">
+<meta name="keywords" content="IT Study Material, Diploma IT Notes, Assignments">
+<meta name="author" content="IT Study Hub">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <style>
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f4f6f9;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
-            color: #333;
-        }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        header {
-            background: linear-gradient(135deg, #0d6efd, #0a58ca);
-            color: white;
-            padding: 30px 15px;
-            text-align: center;
-        }
+<style>
+:root{
+    --primary:#4f46e5;
+    --secondary:#6366f1;
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --text:#1f2937;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
+*{
+    box-sizing:border-box;
+}
 
-        header p {
-            margin-top: 8px;
-            opacity: 0.9;
-        }
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
 
-        main {
-            max-width: 1000px;
-            margin: 25px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-        }
+/* ===== HEADER ===== */
+header{
+    background:linear-gradient(135deg, var(--primary), var(--secondary));
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
 
-        h2 {
-            color: #0d6efd;
-            margin-top: 30px;
-        }
+header h1{
+    font-size:2.4rem;
+    margin:0;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+header p{
+    margin-top:10px;
+    font-size:1.05rem;
+    opacity:0.9;
+}
 
-        li {
-            margin-bottom: 6px;
-        }
+/* ===== MAIN ===== */
+main{
+    max-width:1100px;
+    margin:-40px auto 40px;
+    padding:0 20px;
+}
 
-        .subject-box {
-            background: #f8f9fa;
-            border-left: 5px solid #0d6efd;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 6px;
-        }
+/* ===== GLASS CARD ===== */
+.section{
+    background:rgba(255,255,255,0.9);
+    backdrop-filter: blur(8px);
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+}
 
-        .btn {
-            display: inline-block;
-            background: #198754;
-            color: white;
-            padding: 12px 22px;
-            margin-top: 12px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+.section h2{
+    margin-top:0;
+    color:var(--primary);
+}
 
-        .btn:hover {
-            background: #146c43;
-            transform: scale(1.05);
-        }
+/* ===== SUBJECT GRID ===== */
+.subject-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:20px;
+}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #e9ecef;
-            font-size: 14px;
-            margin-top: 30px;
-        }
-    </style>
-    <meta name="google-site-verification" content="W6Vk3m63ufaZ0FRO7DcbF1NHaK9P1M2TZuo5ySnTNBI" />
+.subject-card{
+    background:var(--card);
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.subject-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+}
+
+.subject-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 45px rgba(0,0,0,0.12);
+}
+
+.subject-card h3{
+    margin-top:10px;
+}
+
+.subject-card p{
+    font-size:0.95rem;
+    opacity:0.85;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 26px;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn:hover{
+    opacity:0.9;
+    transform:scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    background:#eef2ff;
+    color:#4b5563;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+    header h1{
+        font-size:1.9rem;
+    }
+}
+</style>
+
+<meta name="google-site-verification" content="W6Vk3m63ufaZ0FRO7DcbF1NHaK9P1M2TZuo5ySnTNBI" />
 </head>
 
 <body>
 
 <header>
     <h1>📘 IT WALE STUDY MATERIAL</h1>
-    <p>All MATERIAL OF IT WALE GROUP</p>
+    <p>All Study Material from IT WALE Group – Free & Exam Oriented</p>
 </header>
 
 <main>
 
-    <h2>📌 About This Website</h2>
-    <p>
-        This website provides **free, exam-oriented IT study material**
-        for diploma & degree students. All topics are explained in
-        **simple language** with downloadable PDF notes.
-    </p>
+    <div class="section">
+        <h2>📌 About This Website</h2>
+      <p>
+    This platform is specially designed for <b>IT WALE GROUP</b>, providing
+    <b>semester-wise assignments and study material</b>.  
+    The content is well-organized and explained in <b>simple language</b> to
+    support students throughout their semester studies.
+</p>
 
-    <h2>📚 Subjects Available</h2>
-
-    <div class="subject-box">
-        <h3>💾 All Material from IT WALE</h3>
-        <p> IT WALE</p>
-        <a class="btn" href="https://drive.google.com/drive/folders/1f7yNVm8gM8o5JW2Et__j9dgX3SJ8Rsoc" target="_blank">
-            Download  Assignment/Notes
-        </a>
-    </div>
-<!--
-    <div class="subject-box">
-        <h3>🌐 Computer Networks</h3>
-        <p>OSI Model, TCP/IP, Network Devices, Protocols.</p>
-        <a class="btn" href="https://drive.google.com/file/d/YOUR_CN_ID/view" target="_blank">
-            Download CN Notes
-        </a>
     </div>
 
-    <div class="subject-box">
-        <h3>🖥 Operating System</h3>
-        <p>Process, Scheduling, Memory Management, Deadlock.</p>
-        <a class="btn" href="https://drive.google.com/file/d/YOUR_OS_ID/view" target="_blank">
-            Download OS Notes
+    <div class="section">
+        <h2>📚 Available Material</h2>
+
+        <div class="subject-grid">
+
+    <div class="subject-card">
+        <h3>💾 Computer Netwroks</h3>
+        <p>Sub. Code : BE04000271</p>
+        <a class="btn" href="https://drive.google.com/drive/folders/1coZa9AteyCagrbxUj7wj1UN2jCiUU6ji" target="_blank">
+            Open Drive
         </a>
     </div>
 
-    <div class="subject-box">
-        <h3>🌍 Web Technology</h3>
-        <p>HTML, CSS, JavaScript, Backend Basics.</p>
-        <a class="btn" href="https://drive.google.com/file/d/YOUR_WEB_ID/view" target="_blank">
-            Download Web Notes
+    <div class="subject-card">
+        <h3>🖥 Computer Organization & Architecture</h3>
+        <p>Sub. Code : BE04000251</p>
+        <a class="btn" href="https://drive.google.com/drive/folders/1G2jnV56PR8rgbkz0Ob3mY2tJjerH4pRw" target="_blank">
+            Open Drive
         </a>
     </div>
 
-    <div class="subject-box">
-        <h3>🐍 Programming</h3>
-        <p>C, Python, Java – Logic & Problem Solving.</p>
-        <a class="btn" href="https://drive.google.com/file/d/YOUR_PROG_ID/view" target="_blank">
-            Download Programming Notes
-        </a>   -->
+    <div class="subject-card">
+        <h3>📐 Discrete Mathematics</h3>
+        <p>Sub. Code : BE04000261</p>
+        <a class="btn" href="https://drive.google.com/drive/folders/11qKnBVpJQenHjB50VZVKhI0yBosdNc1d" target="_blank">
+            Open Drive
+        </a>
     </div>
+
+    <div class="subject-card">
+        <h3>🧠 Object Oriented Programming</h3>
+        <p>Sub. Code : BE04000231</p>
+        <a class="btn" href="https://drive.google.com/drive/folders/1c-NZw8CYXYCpU4nWcm17QqAkppe-xp-8" target="_blank">
+            Open Drive
+        </a>
+    </div>
+
+    <div class="subject-card">
+        <h3>🖥 Operating Systems
+        </h3>
+        <p>Sub. Code : BE04000221</p>
+        <a class="btn" href="https://drive.google.com/drive/folders/1Kj8TyKrBwGc7OUfS1PtezwBXwwPvqHiO" target="_blank">
+            Open Drive
+        </a>
+    </div>
+
+    <div class="subject-card">
+        <h3>🌍 Environmental Science</h3>
+        <p>Sub. Code : BE04000101</p>
+        <a class="btn" href="https://drive.google.com/drive/folders/1WbGkGj6u0a8xedoQ9-6Qwo8tUtCzxiNh" target="_blank">
+            Open Drive
+        </a>
+    </div>
+
+</div>
+
 
 </main>
 
 <footer>
-    © 2025 IT Study Hub | Free Learning for Students
+    © 2025 IT Study Hub • Free Learning for Students
 </footer>
 
 </body>
