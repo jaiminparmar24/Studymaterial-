@@ -1,71 +1,133 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ultimate Study Material Portal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-            padding: 100px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Study Material Portal</title>
 
-        .box {
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
+<style>
 
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            background: #ffcc00;
-            font-weight: bold;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        button:hover {
-            background: #ffaa00;
-        }
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#1e3c72,#2a5298);
+    padding:20px;
+}
 
-        #prank {
-            display: none;
-            margin-top: 30px;
-            font-size: 22px;
-            color: #ff4444;
-        }
-    </style>
+/* Main Card */
+.box{
+    width:100%;
+    max-width:380px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    animation: fadeIn 1s ease-in-out;
+    color:white;
+}
+
+/* Heading */
+.box h1{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.box p{
+    font-size:14px;
+    opacity:0.9;
+    margin-bottom:25px;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:14px;
+    font-size:16px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background: linear-gradient(45deg,#ffcc00,#ffaa00);
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:active{
+    transform:scale(0.96);
+}
+
+button:hover{
+    background: linear-gradient(45deg,#ffaa00,#ff8800);
+}
+
+/* Prank Message */
+#prank{
+    display:none;
+    margin-top:20px;
+    font-size:16px;
+    color:#ffdddd;
+    animation: slideUp 0.6s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideUp{
+    from{opacity:0; transform:translateY(15px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Extra Mobile Optimization */
+@media(max-width:400px){
+    .box{
+        padding:25px 15px;
+    }
+    .box h1{
+        font-size:18px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-    <div class="box">
-        <h1>📚 Ultimate Engineering Study Material</h1>
-        <p>Download 100% Sure Shot Exam Papers & Important Questions</p>
-        
-        <button onclick="showPrank()">Download Now</button>
+<div class="box">
+    <h1>📚 Ultimate Engineering Study Material</h1>
+    <p>Download 100% Sure Shot Exam Papers & Important Questions</p>
+    
+    <button onclick="showPrank()">Download Now</button>
 
-        <div id="prank">
-            😈 Oyeeee! Study Material nahi milega!  
-            <br><br>
-            Pehle khud padhai karo 😎  
-            <br><br>
-            <strong>"Brain Not Found! Please Install Common Sense."</strong>
-        </div>
+    <div id="prank">
+        😈 Oyeeee! Study Material nahi milega!  
+        <br><br>
+        Pehle khud padhai karo 😎  
+        <br><br>
+        <strong>"Brain Not Found! Please Install Common Sense."</strong>
     </div>
+</div>
 
-    <script>
-        function showPrank() {
-            document.getElementById("prank").style.display = "block";
-            alert("Server Crashed Due To Over Smart Students 😂");
-        }
-    </script>
+<script>
+function showPrank() {
+    document.getElementById("prank").style.display = "block";
+    setTimeout(() => {
+        alert("Server Crashed Due To Over Smart Students 😂");
+    }, 300);
+}
+</script>
 
 </body>
 </html>
