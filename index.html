@@ -1,1 +1,71 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ultimate Study Material Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 100px;
+        }
+
+        .box {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #ffcc00;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #ffaa00;
+        }
+
+        #prank {
+            display: none;
+            margin-top: 30px;
+            font-size: 22px;
+            color: #ff4444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>📚 Ultimate Engineering Study Material</h1>
+        <p>Download 100% Sure Shot Exam Papers & Important Questions</p>
+        
+        <button onclick="showPrank()">Download Now</button>
+
+        <div id="prank">
+            😈 Oyeeee! Study Material nahi milega!  
+            <br><br>
+            Pehle khud padhai karo 😎  
+            <br><br>
+            <strong>"Brain Not Found! Please Install Common Sense."</strong>
+        </div>
+    </div>
+
+    <script>
+        function showPrank() {
+            document.getElementById("prank").style.display = "block";
+            alert("Server Crashed Due To Over Smart Students 😂");
+        }
+    </script>
+
+</body>
+</html>
