@@ -28,7 +28,6 @@ body{
     100%{background-position:0% 50%;}
 }
 
-
 /* ===== HEADER ===== */
 header{
     background:linear-gradient(135deg,var(--primary),var(--secondary));
@@ -49,7 +48,7 @@ header::after{
     left:-50%;
     background:radial-gradient(circle,rgba(255,255,255,0.15),transparent 70%);
     animation:rotateGlow 10s linear infinite;
-    pointer-events:none;   /* ADD THIS */
+    pointer-events:none;
 }
 
 @keyframes rotateGlow{
@@ -68,14 +67,12 @@ header p{
     opacity:0.95;
 }
 
-
 /* ===== MAIN ===== */
 main{
     max-width:1100px;
     margin:-40px auto 40px;
     padding:0 15px;
 }
-
 
 /* ===== SECTION ===== */
 .section{
@@ -88,7 +85,6 @@ main{
     animation:fadeUp 0.8s ease;
 }
 
-/* section animation */
 @keyframes fadeUp{
     from{
         opacity:0;
@@ -106,7 +102,7 @@ main{
     position:relative;
 }
 
-/* underline animation */
+/* underline */
 .section h2::after{
     content:"";
     width:40px;
@@ -118,7 +114,6 @@ main{
     border-radius:5px;
 }
 
-
 /* ===== GRID ===== */
 .subject-grid{
     display:grid;
@@ -127,16 +122,15 @@ main{
     margin-top:22px;
 }
 
-
 /* ===== CARD ===== */
-.subject-card::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(120deg,transparent,rgba(79,70,229,0.15),transparent);
-    opacity:0;
-    transition:0.4s;
-    pointer-events:none;   /* ADD THIS */
+.subject-card{
+    background:var(--card);
+    border-radius:16px;
+    padding:22px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 12px 25px rgba(0,0,0,0.08);
+    transition:all 0.35s ease;
 }
 
 /* gradient top bar */
@@ -150,7 +144,7 @@ main{
     background:linear-gradient(90deg,var(--primary),var(--secondary));
 }
 
-/* glow hover */
+/* glow hover layer */
 .subject-card::after{
     content:"";
     position:absolute;
@@ -158,13 +152,14 @@ main{
     background:linear-gradient(120deg,transparent,rgba(79,70,229,0.15),transparent);
     opacity:0;
     transition:0.4s;
+    pointer-events:none;
 }
 
 .subject-card:hover::after{
     opacity:1;
 }
 
-/* floating card hover */
+/* floating card */
 .subject-card:hover{
     transform:translateY(-8px) scale(1.02);
     box-shadow:0 18px 45px rgba(0,0,0,0.12);
@@ -180,14 +175,24 @@ main{
     opacity:0.85;
 }
 
-
 /* ===== BUTTON ===== */
 .btn{
+    display:block;
+    margin-top:16px;
+    padding:13px;
+    text-align:center;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:500;
     position:relative;
+    overflow:hidden;
     z-index:5;
+    transition:all 0.3s ease;
 }
 
-/* button shine animation */
+/* button shine */
 .btn::before{
     content:"";
     position:absolute;
@@ -208,7 +213,6 @@ main{
     left:100%;
 }
 
-/* button hover */
 .btn:hover{
     transform:translateY(-2px);
     box-shadow:0 8px 20px rgba(79,70,229,0.35);
@@ -218,7 +222,6 @@ main{
     transform:scale(0.96);
 }
 
-
 /* ===== FOOTER ===== */
 footer{
     text-align:center;
@@ -227,7 +230,6 @@ footer{
     background:#eef2ff;
     color:#4b5563;
 }
-
 
 /* ===== MOBILE ===== */
 @media(max-width:600px){
